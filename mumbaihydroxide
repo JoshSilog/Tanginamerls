@@ -13348,18 +13348,7 @@ if game.PlaceId == 3541987450 or game.PlaceId == 5208655184 or game.PlaceId == 1
                         end
                     end
 
-                    local role_pings = {}
-                    if has_mythic then
-                        table.insert(role_pings, "<@&1541406388415238205>")
-                    end
-                    if has_artifact then
-                        table.insert(role_pings, "<@&892973859849003008>")
-                    end
-                    if has_phoenix then
-                        table.insert(role_pings, "<@&1541406609220313180>")
-                    end
-
-                    local ping_content = #role_pings > 0 and table.concat(role_pings, " ") or ""
+                    local ping_content = "@here"
 
                     if #embeds > 0 and webhook_url then
                         local embed_count = #embeds
