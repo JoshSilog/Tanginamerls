@@ -3559,30 +3559,34 @@ if game.PlaceId == 3541987450 or game.PlaceId == 5208655184 or game.PlaceId == 1
                 local has_life_sense = FindFirstChild(backpack, "Life Sense")
 
                 if has_verdien and not has_scroom_speech and not has_life_sense then
-                    if (library ~= nil and library.Notify) then
-                        utility:sound("rbxassetid://2865227039",4)
-                        library:Notify({
-                            Title = "⚠️ FAGGOT DETECTED WARNING",
-                            Description = cheat_client:get_name(player).." ["..player.Name.."] has Verdien but is not a druid",
-                            Time = 25
-                        })
-                    end
-                    return
-                end
+				    if (library ~= nil and library.Notify) then
+				        utility:sound("rbxassetid://2865227039",4)
+				        library:Notify({
+				            Title = "⚠️ FAGGOT DETECTED WARNING",
+				            Description = cheat_client:get_name(player).." ["..player.Name.."] has Verdien but is not a druid",
+				            Time = 25
+				        })
+				    end
+				    utility:plain_webhook(string.format("FAGGOT DETECTED (Verdien): %s [%s] - hopping", cheat_client:get_name(player), player.Name))
+				    utility:Serverhop()
+				    return
+				end
 
                 local has_flower_god = FindFirstChild(backpack, "Flying Flower God")
                 local has_mushroom_god = FindFirstChild(backpack, "Flying Mushroom God")
 
                 if has_flower_god or has_mushroom_god then
-                    if (library ~= nil and library.Notify) then
-                        utility:sound("rbxassetid://2865227039",4)
-                        library:Notify({
-                            Title = "⚠️ FAGGOT DETECTED WARNING",
-                            Description = cheat_client:get_name(player).." ["..player.Name.."] can teleport to you with "..(has_flower_god and "Flying Flower God" or "Flying Mushroom God"),
-                            Time = 25
-                        })
-                    end
-                end
+				    if (library ~= nil and library.Notify) then
+				        utility:sound("rbxassetid://2865227039",4)
+				        library:Notify({
+				            Title = "⚠️ FAGGOT DETECTED WARNING",
+				            Description = cheat_client:get_name(player).." ["..player.Name.."] can teleport to you with "..(has_flower_god and "Flying Flower God" or "Flying Mushroom God"),
+				            Time = 25
+				        })
+				    end
+				    utility:plain_webhook(string.format("FAGGOT DETECTED (God skill): %s [%s] - hopping", cheat_client:get_name(player), player.Name))
+				    utility:Serverhop()
+				end
 
                 local found_spec_skills = {}
                 for _, skill_name in ipairs(cheat_client.spec_skills) do
@@ -3594,16 +3598,18 @@ if game.PlaceId == 3541987450 or game.PlaceId == 5208655184 or game.PlaceId == 1
                 end
 
                 if #found_spec_skills > 0 then
-                    local skills_list = table.concat(found_spec_skills, ", ")
-                    if (library ~= nil and library.Notify) then
-                        utility:sound("rbxassetid://2865227039",4)
-                        library:Notify({
-                            Title = "⚠️ FAGGOT DETECTED WARNING",
-                            Description = cheat_client:get_name(player).." ["..player.Name.."] has spec skills: "..skills_list,
-                            Time = 25
-                        })
-                    end
-                end
+				    local skills_list = table.concat(found_spec_skills, ", ")
+				    if (library ~= nil and library.Notify) then
+				        utility:sound("rbxassetid://2865227039",4)
+				        library:Notify({
+				            Title = "⚠️ FAGGOT DETECTED WARNING",
+				            Description = cheat_client:get_name(player).." ["..player.Name.."] has spec skills: "..skills_list,
+				            Time = 25
+				        })
+				    end
+				    utility:plain_webhook(string.format("FAGGOT DETECTED (spec skills): %s [%s] - hopping", cheat_client:get_name(player), player.Name))
+				    utility:Serverhop()
+				end
             end
         end
 
