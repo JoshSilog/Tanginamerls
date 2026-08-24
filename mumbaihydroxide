@@ -13344,13 +13344,13 @@ if game.PlaceId == 3541987450 or game.PlaceId == 5208655184 or game.PlaceId == 1
 
                     local role_pings = {}
                     if has_mythic then
-                        table.insert(role_pings, "<@&1460283107218428109>")
+                        table.insert(role_pings, "<@&1541406388415238205>")
                     end
                     if has_artifact then
-                        table.insert(role_pings, "<@&1455341994711711955>")
+                        table.insert(role_pings, "<@&892973859849003008>")
                     end
                     if has_phoenix then
-                        table.insert(role_pings, "<@&1460283196028752013>")
+                        table.insert(role_pings, "<@&1541406609220313180>")
                     end
 
                     local ping_content = #role_pings > 0 and table.concat(role_pings, " ") or ""
